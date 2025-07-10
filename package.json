@@ -1,4 +1,13 @@
 {
+  "name": "envagelism-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate"
+  },
   "dependencies": {
     "@prisma/client": "^6.11.1",
     "bcryptjs": "^3.0.2",

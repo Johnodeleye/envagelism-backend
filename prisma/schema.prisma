@@ -8,12 +8,22 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-
 model User {
   id           String    @id @default(uuid())
   email        String?    @unique
   password     String?
   profileImage String?   @default("https://api.multiavatar.com/admin.svg")
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Candidate {
+  id           Int       @id @default(autoincrement())
+  FullName     String?
+  email        String?   @unique
+  Dept         String?
+  profileImage String?   @default("https://api.multiavatar.com/candidate.svg")
+  Level        String?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 }

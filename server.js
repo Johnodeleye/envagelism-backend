@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const { PrismaClient } = require("@prisma/client");
 
 const authRoutes = require("./routes/auth.routes"); 
+const candidateRoutes = require("./routes/candid.route");
+
 
 const app = express();
 const prisma = new PrismaClient();
@@ -25,6 +27,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 app.use("/api/auth", authRoutes); 
+app.use("/api/candidates", candidateRoutes);
 
 // Test Route
 app.get("/", (req, res) => {
