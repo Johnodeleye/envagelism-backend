@@ -47,7 +47,7 @@ DATABASE_URL="postgresql://postgres.xxxx.supabase.com:6543/postgres?pgbouncer=tr
 DIRECT_URL="postgresql://postgres.xxxxx.supabase.com:5432/postgres"
 
 # JWT Secret Key
-JWT_SECRET="7cea8c27b6a4ea662420b73182f22b2fa3b6519ba91852a33c24c1e7c0f87d07848689d095bd"
+JWT_SECRET="go to https://jwtsecrets.com to generate random jwt key"
 5️⃣ Run Database Migrations
 bash
 npx prisma generate
