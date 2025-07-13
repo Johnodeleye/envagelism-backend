@@ -10,7 +10,7 @@ datasource db {
 
 model User {
   id           String    @id @default(uuid())
-  email        String?    @unique
+  email        String?   @unique
   password     String?
   profileImage String?   @default("https://api.multiavatar.com/admin.svg")
   createdAt    DateTime  @default(now())
@@ -24,6 +24,7 @@ model Candidate {
   Dept         String?
   profileImage String?   @default("https://api.multiavatar.com/candidate.svg")
   Level        String?
+  whatsapp     String?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 }

@@ -14,7 +14,7 @@ const prisma = new PrismaClient();
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
     ? process.env.FRONTEND_URL 
-    : ['http://localhost:3000', 'add your local-link here'],
+    : ['http://localhost:5173', 'add your local-link here'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Cookie', 'Set-Cookie'],
   credentials: true,
@@ -28,6 +28,7 @@ app.use(morgan("dev"));
 
 app.use("/api/auth", authRoutes); 
 app.use("/api/candidates", candidateRoutes);
+
 
 // Test Route
 app.get("/", (req, res) => {
